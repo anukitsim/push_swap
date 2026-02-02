@@ -13,7 +13,7 @@ FT_PRINTF_FLAGS = -L $(FT_PRINTF_DIR) -lftprintf
 INCLUDES = -I $(LIBFT_DIR) -I $(FT_PRINTF_DIR)
 
 SRCS = main.c free_functions.c helpers.c stack.c validators.c swap.c rotate.c reverse_rotate.c push.c \
-		manual_sort.c ranking.c
+		manual_sort.c ranking.c turk_helpers.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)

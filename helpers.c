@@ -71,3 +71,19 @@ int handle_string(t_stack **stack_a, char *s)
 	free_array(arr_of_nums);
 	return (1);
 }
+
+int	cost_abs(int cost)
+{
+	if (cost < 0)
+	{
+		cost = cost * (-1);
+	}
+	return (cost);
+}
+
+int	cost_max(int a, int b)
+{
+	if (a > b)
+		return (a);
+	return (b);
+}
