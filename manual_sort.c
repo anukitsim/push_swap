@@ -77,6 +77,7 @@ void sort_five(t_stack **stack_a, t_stack **stack_b)
 	if (!*stack_a)
 		return;
 	temp = *stack_a;
+	rank_list(stack_a);
 	index = find_index(*stack_a);
 	push_min_to_top(stack_a, stack_size, index);
 	pb(stack_a, stack_b);

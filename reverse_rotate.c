@@ -32,6 +32,6 @@ void rrb(t_stack **stack_b)
 
 void rrr(t_stack **stack_a, t_stack **stack_b)
 {
-	if (reverse_rotate(stack_a) || reverse_rotate(stack_b))
+	if (reverse_rotate(stack_a) && reverse_rotate(stack_b))
 		ft_printf("rrr\n");
 }

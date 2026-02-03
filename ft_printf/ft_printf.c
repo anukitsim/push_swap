@@ -29,7 +29,7 @@ int	ft_printf(const char *format, ...)
 			if (format[i] == '%')
 				count += write(1, &(format[i]), 1);
 			else
-				count += ft_handle_format(args, format[i]);
+				count += ft_handle_format(&args, format[i]);
 		}
 		else
 		{

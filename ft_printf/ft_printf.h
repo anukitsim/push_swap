@@ -17,10 +17,10 @@
 # include <unistd.h>
 
 int	ft_printf(const char *format, ...);
-int	ft_print_char(va_list args);
-int	ft_print_string(va_list args);
-int	ft_print_int(va_list args);
+int	ft_print_char(va_list *args);
+int	ft_print_string(va_list *args);
+int	ft_print_int(va_list *args);
 int	ft_putnbr(long n);
-int	ft_handle_format(va_list args, char conversion_char);
+int	ft_handle_format(va_list *args, char conversion_char);
 
 #endif

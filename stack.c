@@ -11,6 +11,10 @@ t_stack *new_node(int content)
 	node->content = content;
 	node->next = NULL;
 	node->previous = NULL;
+	node->pos = 0;
+	node->target_pos = 0;
+	node->cost_a = 0;
+	node->cost_b = 0;
 	return (node);
 }
 

@@ -63,8 +63,10 @@ void				calc_cost(t_stack *stack_a, t_stack *stack_b);
 t_stack				*find_cheapest(t_stack *stack_b);
 void				rotate_both(t_stack **stack_a, t_stack **stack_b,
 						t_stack *cheapest_node);
-static void			rotation_a(t_stack **stack_a, t_stack *cheapest);
-static void			rotation_b(t_stack **stack_b, t_stack *cheapest);
+void				rotation_a(t_stack **stack_a, t_stack *cheapest);
+void				rotation_b(t_stack **stack_b, t_stack *cheapest);
 void				final_rotation(t_stack **stack_a);
+void				turk_sort(t_stack **stack_a, t_stack **stack_b);
+void	move_cheapest(t_stack **stack_a, t_stack **stack_b, t_stack *cheapest);
 
 #endif

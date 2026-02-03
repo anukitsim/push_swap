@@ -12,13 +12,13 @@
 
 #include "ft_printf.h"
 
-int	ft_print_int(va_list args)
+int	ft_print_int(va_list *args)
 {
 	int		count;
 	long	int_arg;
 
 	count = 0;
-	int_arg = va_arg(args, int);
+	int_arg = va_arg(*args, int);
 	if (int_arg < 0)
 	{
 		count += write(1, "-", 1);

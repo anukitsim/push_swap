@@ -16,6 +16,7 @@ void do_ops(t_stack **stack_a)
 		sort_three(stack_a);
 	else if (size == 4)
 	{
+		rank_list(stack_a);
 		index = find_index(*stack_a);
 		push_min_to_top(stack_a, size, index);
 		pb(stack_a, &stack_b);
@@ -24,7 +25,10 @@ void do_ops(t_stack **stack_a)
 	}
 	else if (size == 5)
 		sort_five(stack_a, &stack_b);
+	else
+		turk_sort(stack_a, &stack_b);
 }
+
 
 int main(int argc, char **argv)
 {

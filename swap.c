@@ -43,6 +43,6 @@ void sb(t_stack **stack_b)
 
 void ss(t_stack **stack_a, t_stack **stack_b)
 {
-	if (swap(stack_a) || swap(stack_b))
+	if (swap(stack_a) && swap(stack_b))
 		ft_printf("ss\n");
 }

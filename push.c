@@ -10,7 +10,7 @@ int push(t_stack **src, t_stack **dest)
 	top = *src;
 	*src = top->next;
 	if (*src)
-		top->next->previous = NULL;
+		(*src)->previous = NULL;
 	top->next = *dest;
 	top->previous = NULL;
 	if (*dest)
