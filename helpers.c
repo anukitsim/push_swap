@@ -62,6 +62,12 @@ int handle_string(t_stack **stack_a, char *s)
 		free_list(*stack_a);
 		return (0);
 	}
+	if (!arr_of_nums[0])
+	{
+		free_array(arr_of_nums);
+		free_list(*stack_a);
+		return (0);
+	}
 	if (!arr_to_node(arr_of_nums, stack_a))
 	{
 		free_array(arr_of_nums);

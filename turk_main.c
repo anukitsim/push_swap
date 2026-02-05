@@ -6,7 +6,7 @@
 /*   By: anukitsimintia <anukitsimintia@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 18:26:13 by atsimint          #+#    #+#             */
-/*   Updated: 2026/02/03 17:18:25 by anukitsimin      ###   ########.fr       */
+/*   Updated: 2026/02/05 14:19:02 by anukitsimin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,6 @@ void push_to_b(t_stack **stack_a, t_stack **stack_b)
 {
 	if (!*stack_a)
 		return;
-	if (list_size(stack_a) >= 5)
-	{
-		pb(stack_a, stack_b);
-		pb(stack_a, stack_b);
-	}
 	while (list_size(stack_a) > 3)
 	{
 		pb(stack_a, stack_b);
