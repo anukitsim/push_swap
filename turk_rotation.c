@@ -53,32 +53,32 @@ void rotation_b (t_stack **stack_b, t_stack *cheapest)
 	}
 }
 
-void final_rotation (t_stack **stack_a)
+static void	rotate_min_to_top(t_stack **stack_a, t_stack *min_node, int size)
 {
-	t_stack *min_node;
-	int size;
-	int move_count;
+	int	move_count;
 
-	move_count = 0;
+	if (min_node->pos < size / 2)
+	{
+		move_count = min_node->pos;
+		while (move_count > 0)
+		{
+			ra(stack_a);
+			move_count--;
+		}
+	}
+	else
+	{
+		move_count = size - min_node->pos;
+		while (move_count > 0)
+		{
+			rra(stack_a);
+			move_count--;
+		}
+	}
+}
+
+void	final_rotation(t_stack **stack_a)
+{
 	set_current_position(stack_a);
-	min_node = find_min(stack_a);
-	size = list_size(stack_a);
-		if (min_node->pos < size/2)
-		{
-			move_count = min_node->pos;
-			while (move_count > 0)
-			{
-				ra(stack_a);
-				move_count--;
-			}
-		}
-		else
-		{
-			move_count = size - min_node->pos;
-			while (move_count > 0)
-			{
-				rra(stack_a);
-				move_count--;
-			}
-		}
+	rotate_min_to_top(stack_a, find_min(stack_a), list_size(stack_a));
 }
