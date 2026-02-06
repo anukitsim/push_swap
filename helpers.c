@@ -43,19 +43,10 @@ static int arr_to_node(char **arr, t_stack **stack_a)
 	return (1);
 }
 
-int handle_string(t_stack **stack_a, char *s)
+static int	handle_split_string(t_stack **stack_a, char *s)
 {
 	char **arr_of_nums;
 
-	if (!ft_strchr(s, ' '))
-	{
-		if (!valid_node(&s, stack_a))
-		{
-			free_list(*stack_a);
-			return (0);
-		}
-		return (1);
-	}
 	arr_of_nums = ft_split(s, ' ');
 	if (!arr_of_nums)
 	{
@@ -78,18 +69,16 @@ int handle_string(t_stack **stack_a, char *s)
 	return (1);
 }
 
-int	cost_abs(int cost)
+int handle_string(t_stack **stack_a, char *s)
 {
-	if (cost < 0)
+	if (!ft_strchr(s, ' '))
 	{
-		cost = cost * (-1);
+		if (!valid_node(&s, stack_a))
+		{
+			free_list(*stack_a);
+			return (0);
+		}
+		return (1);
 	}
-	return (cost);
-}
-
-int	cost_max(int a, int b)
-{
-	if (a > b)
-		return (a);
-	return (b);
+	return (handle_split_string(stack_a, s));
 }

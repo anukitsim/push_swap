@@ -57,8 +57,6 @@ t_stack				*find_max(t_stack **stack_a);
 void				set_current_position(t_stack **stack_a);
 void				find_target_node(t_stack **stack_a, t_stack *node_b);
 void				assign_targets_b(t_stack *stack_a, t_stack *stack_b);
-int					cost_max(int a, int b);
-int					cost_abs(int cost);
 void				calc_cost(t_stack *stack_a, t_stack *stack_b);
 t_stack				*find_cheapest(t_stack *stack_b);
 void				rotate_both(t_stack **stack_a, t_stack **stack_b,

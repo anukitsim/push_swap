@@ -1,6 +1,20 @@
 #include "push_swap.h"
 #include "ft_printf.h"
 
+static int	cost_abs(int cost)
+{
+	if (cost < 0)
+		cost = cost * (-1);
+	return (cost);
+}
+
+static int	cost_max(int a, int b)
+{
+	if (a > b)
+		return (a);
+	return (b);
+}
+
 void	calc_cost(t_stack *stack_a, t_stack *stack_b)
 {
 	int	stack_a_size;
